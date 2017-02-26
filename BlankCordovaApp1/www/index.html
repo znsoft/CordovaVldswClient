@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <!--
+        Customize the content security policy in the meta tag below as needed. Add 'unsafe-inline' to default-src to enable inline JavaScript.
+        For details, see http://go.microsoft.com/fwlink/?LinkID=617521
+    -->
+        
+        
+        <meta name="format-detection" content="telephone=no">
+        <meta name="msapplication-tap-highlight" content="no">
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+        <link rel="stylesheet" type="text/css" href="css/index.css">
+        <title>BlankCordovaApp1</title>
+        </head>
+    <body>
+        <script src="../plugins/cordova-plugin-http/www/cordovaHTTP.js"></script>
+        <script src="scripts/jquery-3.1.1.js" type="text/javascript" charset="utf-8"></script>
+        <script type="text/javascript" src="cordova.js"></script>
+        <script type="text/javascript" src="scripts/platformOverrides.js"></script>
+        <script type="text/javascript" src="scripts/vldsw.js"></script>
+        <script type="text/javascript" src="scripts/index.js"></script>
+        
+        
+        <table style="width:100%;">
+            <tr>
+                <td><input id="nzchatmessage" type="text" /><input id="SendButton" type="button" value="Say" onclick="nzSend()"/></td>
+            </tr>
+            <tr>
+                <td style="position: relative; z-index: auto; height: 100%; list-style-type: circle; caption-side: bottom; display: table-row-group; border-style: dotted">        <div id="nzchatcontent" aria-multiline="True" style="position: relative; z-index: auto; width: auto; height: auto; top: auto; overflow: auto; list-style-type: circle">LOADING... PLEASE WAIT. </div></td>
+            </tr>
+        </table>
+        
+
+        
+
+        
+
+        
+    </body>
+</html>
+
