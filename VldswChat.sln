@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{262852C6-CD72-467D-83FE-5EEB1973A190}") = "BlankCordovaApp1", "BlankCordovaApp1\BlankCordovaApp1.jsproj", "{1A252199-24B7-4046-B885-4E33D4E4F5D6}"
+Project("{262852C6-CD72-467D-83FE-5EEB1973A190}") = "VldswChat", "BlankCordovaApp1\VldswChat.jsproj", "{1A252199-24B7-4046-B885-4E33D4E4F5D6}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

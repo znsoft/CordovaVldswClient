@@ -48,13 +48,13 @@ function nzSend() {
         return false;
     }
     nztime1 = new Date().getTime();
-    if (nztime2==null || nztime1 > nztime2) {
+    if (nztime2 == null || nztime1 > nztime2) {
         nzchatobj("#nzchatmessage").val('');
-//        nzcolor = nzchatobj('#nzchatskin').val();
+        //        nzcolor = nzchatobj('#nzchatskin').val();
         nztime2 = nztime1 + 1000;
         nzchatobj.post("http://vldsw.ru/plugin.php?id=th_chat:post", { 'text': data, 'lastid': nzlastid, 'touid': nztouid }, function (data) {
             data = nzchatobj.parseJSON(data);
-           // alert(data);
+            // alert(data);
             if (data.type == 1) {
                 alert(data.error);
                 if (data.script_add == 1) {
@@ -145,13 +145,13 @@ function (values) {
     console.log(isLoggined);
     if (isLoggined) {
         vldcookie = values[0][1];
+        ref.hide();
         document.cookie = vldcookie;
         nzLoadTextInit();
-
-        //ref.removeEventListener('loadstop', checkLogin);
-        //ref.close();
-           // SetNewRef('http://vldsw.ru/plugin.php?id=th_chat:chat_full', checkChat);
-    } else ref.show();
+    } else {
+        ref.show();
+        setTimeout(checkLogin, 5000);
+    }
 }
 );
 }
