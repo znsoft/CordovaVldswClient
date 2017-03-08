@@ -90,7 +90,7 @@ function parsehtmlmsg(str) {
             regex.lastIndex++;
         }
 
-        result = result + '<tr><td>' + m[1] + ":\t  " + m[2] + "<hr></td></tr>";
+        result = result + '<tr><td>' + m[1] + ":\t  " + m[2].replace(/src\s?=\s?(["'])(.+)(\1)/gmi, "src=$1http://vldsw.ru/$2$1" ) + "<hr></td></tr>";
     }
     return result;
 }
