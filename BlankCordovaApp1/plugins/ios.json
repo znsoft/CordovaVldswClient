@@ -15,6 +15,9 @@
         },
         "cordova-plugin-whitelist": {
             "PACKAGE_NAME": "io.cordova.myappf0e248"
+        },
+        "cordova-plugin-background-mode": {
+            "PACKAGE_NAME": "io.cordova.myappf0e248"
         }
     },
     "dependent_plugins": {
@@ -22,6 +25,9 @@
             "PACKAGE_NAME": "io.cordova.myappf0e248"
         },
         "cordova-plugin-file": {
+            "PACKAGE_NAME": "io.cordova.myappf0e248"
+        },
+        "cordova-plugin-device": {
             "PACKAGE_NAME": "io.cordova.myappf0e248"
         }
     }

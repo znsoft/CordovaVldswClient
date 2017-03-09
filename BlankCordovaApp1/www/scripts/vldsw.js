@@ -33,7 +33,10 @@ function nzLoadText() {
                     nzlastid = k;
                     v = parsehtmlmsg(v);
                     nzchatobj("#afterme").after(v);
+                    setnewBackground(v);
                 }
+                
+                //if (cordova.plugins.backgroundMode.isActive()) console.log('back');
             });
             //nzchatobj("#nzchatolcontent").html(data.chat_online);
             //nzchatobj("#nzoltotal").html(data.chat_online_total);
@@ -69,6 +72,8 @@ function nzSend() {
                         v = parsehtmlmsg(v);
                         nzchatobj("#afterme").after(v);
                     }
+
+
                 });
             }
         });
@@ -76,6 +81,30 @@ function nzSend() {
         alert('Send it to.');
     }
     return;
+}
+
+function setnewBackground(str) {
+    
+    cordova.plugins.backgroundMode.configure({
+        title: "Vldsw",
+        text: str,
+        icon: 'icon', // this will look for icon.png in platforms/android/res/drawable|mipmap
+        color: 'F14F4D',
+        resume: true,
+        hidden: false,
+        bigText: false
+    });
+/*    cordova.plugins.backgroundMode.setDefaults({
+        title: "Vldsw",
+        text: str,
+        icon: 'icon', // this will look for icon.png in platforms/android/res/drawable|mipmap
+        color: 'F14F4D',
+        resume: true,
+        hidden: false,
+        bigText: false
+    });
+*/
+
 }
 
 
@@ -159,57 +188,4 @@ function (values) {
 function readUrl(url) {
     SetNewRef(url, checkLogin);
 
-    /*  $.get(file, function (data, textStatus,jqXHR ) {
-          console.log(jqXHR.getAllResponseHeaders());
-         // console.log(data);
-
-          var re = findHashes(data);
-          console.log(re);
-          var src = getImgUrl("http://vldsw.ru/", re[1]);
-
-
-          //var img = document.getElementById('pic');
-          //img.src = src;
-
-          cordovaHTTP.setHeader("Referer", file);
-          
-          cordovaHTTP.downloadFile(src, {}, {}, "file:///tmp.png", function (entry) {
-              
-              // prints the filename
-              console.log(entry.name);
-
-              // prints the filePath
-              console.log(entry.fullPath);
-          }, function (response) {
-              console.error(response.error);
-          });
-
-
-
-          cordovaHTTP.get(src, {}, {
-              Authorization: "OAuth2: token"
-          }, function (response) {
-              console.log(response.status);
-              //alert(response.data);//png file
-//                ctx.putImageData(px, 0, 0);
-             // var canvas = document.createElement('CANVAS');
-              var canvas = document.getElementById('canvas');
-              var ctx = canvas.getContext('2d');
-              console.log(typeof response.data);
-              //ctx.putImageData(response.data, 0, 0);
-              
-              //    dataURL = canvas.toDataURL(outputFormat);
-
-
-              //    var img = document.getElementById('pic');
-               //   img.src = dataURL;
-
-
-          }, function(response) {
-              console.error(response.error);
-          });
-
-          
-      });
-*/
 }
